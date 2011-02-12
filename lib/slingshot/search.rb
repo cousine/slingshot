@@ -65,7 +65,7 @@ module Slingshot
         request.update( { :size => @size } )     if @size
         request.update( { :from => @from } )     if @from
         request.update( { :fields => @fields } ) if @fields
-        request.to_json
+        Yajl::Encoder.encode(request)
       end
 
     end

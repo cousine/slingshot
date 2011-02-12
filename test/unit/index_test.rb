@@ -66,7 +66,7 @@ module Slingshot
 
           should "store Hash it under its ID property" do
             Configuration.client.expects(:post).with("#{Configuration.url}/dummy/document/123",
-                                                     {:id => 123, :title => 'Test'}.to_json).
+                                                     Yajl::Encoder.encode({:id => 123, :title => 'Test'})).
                                                 returns('{"ok":true,"_id":"123"}')
             @index.store :id => 123, :title => 'Test'
           end
