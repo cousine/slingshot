@@ -14,6 +14,7 @@ require 'slingshot/results/item'
 require 'slingshot/index'
 require 'slingshot/dsl'
 require 'slingshot/model/search'
+require 'slingshot/model/callbacks'
 
 module Slingshot
   extend DSL
