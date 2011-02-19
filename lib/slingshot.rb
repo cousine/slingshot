@@ -3,6 +3,7 @@ require 'yajl/json_gem'
 require 'active_model'
 
 require 'slingshot/rubyext/hash'
+require 'slingshot/rubyext/symbol'
 require 'slingshot/configuration'
 require 'slingshot/client'
 require 'slingshot/client'
