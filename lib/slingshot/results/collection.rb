@@ -16,7 +16,7 @@ module Slingshot
                        if Configuration.wrapper == Hash
                          h
                        else
-                         document = h['_source'] ? h['_source'] : h['fields']
+                         document = h['fields'] ? h.delete('fields') : h.delete('_source')
                          h.update document if document
                          Configuration.wrapper.new(h)
                        end
